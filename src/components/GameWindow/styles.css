@@ -1,0 +1,461 @@
+/* Game Window Styles */
+.game-window {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.game-window .game-modal-content {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0;
+  background: white;
+  color: #374151;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  min-height: fit-content;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 24px 24px 0 24px;
+  margin-bottom: 24px;
+}
+
+.game-title-section {
+  flex: 1;
+}
+
+.game-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: #374151;
+}
+
+.game-info {
+  display: flex;
+  gap: 16px;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.game-modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.game-modal-close:hover {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.game-content {
+  padding: 0 24px 24px 24px;
+}
+
+.round-info,
+.room-info {
+  background: #f3f4f6;
+  color: #6b7280;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+
+/* Score Display */
+.score-card {
+  background: #f9fafb !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+.score-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.player-score,
+.opponent-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.player-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.score {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2563eb;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.vs {
+  font-size: 1.5rem;
+  font-weight: 700;
+  opacity: 0.7;
+  padding: 0 16px;
+}
+
+/* Status Cards */
+.status-card {
+  background: #f9fafb !important;
+  border: 1px solid #e5e7eb !important;
+  text-align: center;
+}
+
+.status-card h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.5rem;
+  color: #374151;
+}
+
+.status-card p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+/* Choices Grid */
+.choices-card {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  text-align: center;
+}
+
+.choices-card h3 {
+  margin: 0 0 24px 0;
+  font-size: 1.5rem;
+  color: #2563eb;
+}
+
+.choices-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.choice-button {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%) !important;
+  border: none !important;
+  color: white !important;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.choice-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+}
+
+.choice-button:active {
+  transform: translateY(-2px);
+}
+
+.choice-emoji {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.choice-name {
+  display: none;
+}
+
+/* Result Display */
+.result-card {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  text-align: center;
+}
+
+.result-card h3 {
+  margin: 0 0 24px 0;
+  font-size: 1.5rem;
+  color: #2563eb;
+}
+
+.result-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.player-result,
+.opponent-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.choice-display {
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.result-message {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2563eb;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Game Actions */
+.game-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+/* Request Message */
+.request-message {
+  text-align: center;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  border-left: 4px solid #2563eb;
+}
+
+.request-message p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* Invite Status Message */
+.invite-status-message {
+  text-align: center;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: #f0f9ff;
+  border-radius: 8px;
+  border-left: 4px solid #0ea5e9;
+}
+
+.invite-status-message p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #0c4a6e;
+}
+
+/* Action Buttons Row */
+.action-buttons-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.action-buttons-row button {
+  flex-shrink: 0;
+  min-width: 140px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .game-window {
+    padding: 16px;
+  }
+
+  .game-window .game-modal-content {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .game-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .game-info {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .status-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .status-card p {
+    font-size: 1rem;
+  }
+
+  .choices-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .result-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .result-message {
+    font-size: 1.1rem;
+  }
+
+  .player-name {
+    font-size: 1rem;
+  }
+
+  .score {
+    font-size: 2rem;
+  }
+
+  .choices-grid {
+    gap: 16px;
+    max-width: 300px;
+  }
+
+  .choice-button {
+    width: 70px;
+    height: 70px;
+  }
+
+  .choice-emoji {
+    font-size: 2rem;
+  }
+
+  /* Keep result display horizontal on mobile */
+
+  .action-buttons-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .action-buttons-row button {
+    width: 100%;
+    min-width: auto;
+    font-size: 0.9rem;
+  }
+
+  .request-message p {
+    font-size: 0.9rem;
+  }
+
+  .invite-status-message p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-window {
+    padding: 12px;
+  }
+
+  .game-window .game-modal-content {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .game-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .status-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .status-card p {
+    font-size: 0.9rem;
+  }
+
+  .choices-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .result-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .result-message {
+    font-size: 1rem;
+  }
+
+  .player-name {
+    font-size: 0.9rem;
+  }
+
+  .score {
+    font-size: 1.8rem;
+  }
+
+  .vs {
+    font-size: 1rem;
+  }
+
+  .choice-button {
+    width: 60px;
+    height: 60px;
+  }
+
+  .choice-emoji {
+    font-size: 1.8rem;
+  }
+
+  .action-buttons-row button {
+    font-size: 0.8rem;
+    width: 100%;
+    min-width: auto;
+  }
+
+  .request-message p {
+    font-size: 0.8rem;
+  }
+
+  .invite-status-message p {
+    font-size: 0.8rem;
+  }
+}
