@@ -1,0 +1,138 @@
+/* Hero Section Styles */
+.hero-card {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.game-icon {
+  margin-bottom: 24px;
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.icon-symbol {
+  font-size: 32px;
+  color: white;
+  font-weight: bold;
+}
+
+.hero-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  color: #718096;
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+.input-section {
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.input-container {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.input-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.player-input {
+  flex: 1;
+  padding: 16px 20px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 16px;
+  background: white;
+  color: #2d3748;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.player-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.player-input::placeholder {
+  color: #a0aec0;
+}
+
+.generate-button {
+  white-space: nowrap;
+  min-width: 100px;
+}
+
+.enter-button {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-card {
+    padding: 32px 24px !important;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .icon-circle {
+    width: 64px;
+    height: 64px;
+  }
+
+  .icon-symbol {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-card {
+    padding: 24px 20px !important;
+  }
+
+  .hero-title {
+    font-size: 22px;
+  }
+
+  .icon-circle {
+    width: 56px;
+    height: 56px;
+  }
+
+  .icon-symbol {
+    font-size: 20px;
+  }
+
+  /* .generate-button {
+    min-width: auto;
+    width: 100%;
+  } */
+}
